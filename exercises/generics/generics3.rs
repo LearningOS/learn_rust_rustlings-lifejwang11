@@ -10,6 +10,7 @@
 
 // Execute 'rustlings hint generics3' for hints!
 
+use std::fmt;
 // I AM NOT DONE
 
 pub struct ReportCard {
@@ -18,9 +19,10 @@ pub struct ReportCard {
     pub student_age: u8,
 }
 
+
 impl ReportCard {
     pub fn print(&self) -> String {
-        format!("{} ({}) - achieved a grade of {}",
+        write!("{} ({}) - achieved a grade of {}",
             &self.student_name, &self.student_age, &self.grade)
     }
 }
